@@ -3,11 +3,11 @@ React-Redux application to manage, add, and delete users
 
 # Whats in the Repo?
 - There are two versions of the project:
-  1. userManagement_axios
+  - userManagement_axios
     - Uses Stephen Grider's API
     - I wrote this project when learning react-redux: https://www.udemy.com/react-redux/learn/v4/overview
     - Refactored it for this exercise
-  2. userManagement_localStorage
+  - userManagement_localStorage
     - Uses local storage to store data
     
 # Setup:

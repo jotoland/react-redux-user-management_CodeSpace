@@ -14,8 +14,6 @@ const API_KEY = `?key=KRAMER12`;
 export function fetchUsers() {
 	const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
 
-	console.log(`fetchUsers_Reqeust: `, request);
-
 	return {
 		type: FETCH_USERS,
 		payload: request
@@ -26,9 +24,7 @@ export function fetchUsers() {
 // Action Creator: Create User
 export function createUser(values, callback, isTest) {
 	const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values)
-		.then(() => {console.log(request); callback();});
-
-	console.log(`createUser_Reqeust: `, request);
+		.then(() => callback(););
 
 	return {
 		type: CREATE_USER,
@@ -40,8 +36,6 @@ export function createUser(values, callback, isTest) {
 export function fetchUser(id) {
 	const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
 
-	console.log(`fetchUser_Reqeust: `, request);
-
 	return {
 		type: FETCH_USER,
 		payload: request
@@ -52,8 +46,6 @@ export function fetchUser(id) {
 export function deleteUser(id, callback) {
 	const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
 		.then(() => callback());
-
-	console.log(`deleteUser_Reqeust: `, request);
 
 	return {
 		type: DELETE_USER,
