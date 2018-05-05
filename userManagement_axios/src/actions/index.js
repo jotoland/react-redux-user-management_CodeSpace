@@ -22,9 +22,9 @@ export function fetchUsers() {
 }
 
 // Action Creator: Create User
-export function createUser(values, callback, isTest) {
+export function createUser(values, callback) {
 	const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values)
-		.then(() => callback(););
+		.then(() => callback());
 
 	return {
 		type: CREATE_USER,
