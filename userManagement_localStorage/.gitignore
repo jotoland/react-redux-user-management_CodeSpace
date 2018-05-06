@@ -1,0 +1,17 @@
+/node_modules
+bundle.js
+npm-debug.log
+.DS_Store
+dist
+
+# IntelliJ
+*.iml
+/.idea
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# mintty
+mintty.exe.stackdump
+*.stackdump
