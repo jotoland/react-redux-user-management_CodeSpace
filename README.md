@@ -9,6 +9,18 @@ React-Redux application to manage, add, and delete users
     - Refactored it for this exercise
   - userManagement_localStorage
     - Uses local storage to store data
+    - Refactored from axios version
+    - Uses middleware to shape data
+
+# What was refactored?
+- I changed the way the form is rendered
+- Ability to update the user
+- Clear values button
+- Testing: Mocha, Chai Unit testing
+- ES6 syntax
+- Local Storage
+- Middleware
+- Styling, alerts
     
 # Setup:
   - You mush download and install Node.js: https://nodejs.org/en/download/

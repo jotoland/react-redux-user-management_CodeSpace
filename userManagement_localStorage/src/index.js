@@ -9,7 +9,6 @@ import FetchUser from './middleware/fetchUser_middleware';
 import DeleteUser from './middleware/deleteUser_middleware';
 import reducers from './reducers';
 
-
 import App from './app';
 
 const middleware = {

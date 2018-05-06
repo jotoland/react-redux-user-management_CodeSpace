@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jotoland/react-redux-user-management_CodeSpace"
   },
   "scripts": {
     "start": "webpack-dev-server",
