@@ -31,6 +31,6 @@ React-Redux application to manage, add, and delete users
   - You will find a folder named custom scripts
     - In here you will see .bat files to run
       - install_run_project.bat: installs the project, launches default browser (navigates to localhost:8080), and runs project
-      - launch_chrome.bat: will launch the default browser and naviagate to localhost:8080
-      - run_project.bat: runs launch_chrome.bat, runs the project
+      - launch_browser.bat: will launch the default browser and naviagate to localhost:8080
+      - run_project.bat: runs launch_browser.bat, runs the project
       - runTests.bat: runs the unit tests for the project
