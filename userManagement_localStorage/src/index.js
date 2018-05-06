@@ -7,18 +7,17 @@ import FetchUsers from './middleware/fetchUsers_middleware';
 import CreateUser from './middleware/createUser_middleware';
 import FetchUser from './middleware/fetchUser_middleware';
 import DeleteUser from './middleware/deleteUser_middleware';
+import UpdateUser from './middleware/updateUser_middleware';
 import reducers from './reducers';
 
 import App from './app';
-
-const middleware = {
-}
 
 const createStoreWithMiddleware = applyMiddleware( 
 	FetchUsers,
 	CreateUser,
 	FetchUser,
-	DeleteUser
+	DeleteUser,
+	UpdateUser
 )(createStore);
 
 ReactDOM.render (

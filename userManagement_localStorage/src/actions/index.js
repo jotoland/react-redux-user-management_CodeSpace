@@ -2,7 +2,8 @@ import {
 	FETCH_USERS,
 	FETCH_USER,
 	CREATE_USER,
-	DELETE_USER
+	DELETE_USER,
+	UPDATE_USER
 } from './types';
 
 // Action Creator: Fetch Users
@@ -35,5 +36,13 @@ export function deleteUser(id, callback) {
 	return {
 		type: DELETE_USER,
 		payload: { yoyoDelete: { id, callback } }
+	};
+}
+
+// Action Creator: Update User
+export function updateUser(id, values, callback) {
+	return {
+		type: UPDATE_USER,
+		payload: { yoyoUpdate: { id, values, callback } }
 	};
 }

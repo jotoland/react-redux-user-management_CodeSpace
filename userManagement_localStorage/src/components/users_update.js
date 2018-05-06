@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createUser, deleteUser, fetchUser } from '../actions';
+import { fetchUser, updateUser } from '../actions';
 
 class UsersUpdate extends Component {
 	componentDidMount() {
@@ -24,20 +24,19 @@ class UsersUpdate extends Component {
 		if (!values.hasOwnProperty('address')) {
 			values.address = this.props.user.address;
 		}
-		// Call ActionCreator with callBack Function
-		this.props.deleteUser(this.props.user.id.toString(), () => {
-			this.props.createUser(values, () => {
-				window.alert(
-					`User ${id} Updated: ${JSON.stringify(
-						{
-							fname: values.fname, 
-							lname: values.lname, 
-							address: values.address 
-						}, null, 2)}`
-				);
+
+		this.props.updateUser(this.props.user.id.toString(), values, () => {
+			window.alert(
+				`User ${id} Updated: ${JSON.stringify(
+					{
+						fname: values.fname, 
+						lname: values.lname, 
+						address: values.address 
+					}, null, 2)}`
+			);
 			this.props.history.push('/');
-			});
 		});
+		
 	}
 
 	renderField(field){
@@ -119,5 +118,5 @@ export default reduxForm({
 	// Name of the form (has to be unique)
 	form: 'UsersNewForm'
 })(
-	connect(mapStateToProps, { fetchUser, createUser, deleteUser })(UsersUpdate)
+	connect(mapStateToProps, { fetchUser, updateUser })(UsersUpdate)
 );

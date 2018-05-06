@@ -1,5 +1,5 @@
 import _ from 'lodash';
-// Middleware for deleteing one user; Action: deleteUser(id)
+// Middleware for deleteing one user; Action: deleteUser(id, callback)
 export default function({dispatch}) {
 	return next => action => {
 		if (!action.payload || !action.payload.yoyoDelete) {
