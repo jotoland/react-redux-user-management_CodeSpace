@@ -1,2 +1,2 @@
-call launch_chrome.bat
+call launch_browser.bat
 call npm start
